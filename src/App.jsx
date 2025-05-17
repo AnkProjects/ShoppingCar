@@ -1,16 +1,17 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import {MyRoutes} from './router/router.jsx';
+import './App.css';
+import Navbar from "./shared/navbar/navbar.jsx";
 
 function App() {
 
-  return (
-    <Router>
-        <Routes>
-            <Route path = '/' element = {<Home/>} />
-        </Routes>
-    </Router>
-  )
+    return (
+        <>
+            <Navbar/>
+            <MyRoutes/>
+        </>
+    );
 }
 
-export default App
+export default App;
